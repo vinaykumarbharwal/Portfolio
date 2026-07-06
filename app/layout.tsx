@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Vinay Kumar | Python Full-Stack Web Developer",
     description: "Python full-stack web developer focused on modern web apps, APIs, data workflows, and AI tools.",
     images: ["https://pbs.twimg.com/profile_images/1969875126146740224/MgyHX9EC_400x400.jpg"],
-    creator: "@vinaybharwal23",
+    creator: "@bharwalvinay",
   },
   icons: {
     icon: [
@@ -105,7 +105,7 @@ export default function RootLayout({
               "sameAs": [
                 "https://github.com/vinaykumarbharwal",
                 "https://www.linkedin.com/in/vinaykumarbharwal",
-                "https://x.com/vinaybharwal23",
+                "https://x.com/bharwalvinay",
                 "https://www.instagram.com/vinay_bhxrwal_0001"
               ]
             })

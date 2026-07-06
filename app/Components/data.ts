@@ -10,49 +10,60 @@ export const portfolioData = {
     ],
     experience: [
         {
-            year: "JAN 2026 — PRESENT",
-            company: "Capgemini",
-            role: "Software Engineering Intern (Exceller)",
+            year: "2026",
+            company: "HIET College",
+            role: "Winner - Hack-O-Fest 2026",
             points: [
-                "Gained hands-on experience in the full Software Development Life Cycle (SDLC) using Agile Scrum methodologies.",
-                "Full-stack program covering C#, Python, ASP.NET Core, Angular, React, JavaScript (ES6+), CI/CD with Azure DevOps, Git, GitHub Copilot, and Power Apps for end-to-end web application development."
+                "Built a full-stack application, TrailSafe, with a Python backend integrating multiple external REST APIs for real-time risk scoring and route optimization."
             ]
         },
         {
-            year: "APR 2024 — FEB 2025",
-            company: "YCCE",
-            role: "Web Developer",
+            year: "CUHP",
+            company: "Central University of HP",
+            role: "Organizer - CUHP-CTF",
             points: [
-                "Developed ICASET website using Next.js, achieving Top-3 Google ranking for 10+ conference keywords.",
-                "Resulted in 500+ attendee registrations and 1,000+ daily page views during peak traffic."
-            ]
-        },
-        {
-            year: "JAN 2023 — FEB 2024",
-            company: "YCCE Student Council",
-            role: "Technical Head",
-            points: [
-                "Orchestrated 2+ hackathons (ENIGMA, CODERUSH 1.0) with 250+ participants.",
-                "Conducted weekly departmental coding contests for 50+ students."
-            ]
-        },
-        {
-            year: "AUG 2024 — PRESENT",
-            company: "CTSC (College Tech Society)",
-            role: "Optimum Head (Media & Branding)",
-            points: [
-                "Directed media and branding operations for college fests with 3,000+ attendees.",
-                "Boosted Instagram engagement by 2.5x through high-quality visuals."
+                "Part of the organizing team for 11 Capture The Flag (CTF) cybersecurity events, assisting with challenge development, participant coordination, and live leaderboard management."
             ]
         }
     ],
-    education: {
-        year: "2021 — 2026",
-        school: "Govt. PG College Una (HPU) | Central University of Himachal Pradesh (CUHP)",
-        degree: "B.Sc. Computer Science (2021-2024) | MCA (2024-2026)",
-        location: "Una, Himachal Pradesh, India"
-    },
+    education: [
+        {
+            year: "2021-2024",
+            school: "Govt. PG College Una",
+            degree: "B.Sc. Computer Science",
+            university: "Himachal Pradesh University (HPU)",
+            location: "Una, Himachal Pradesh, India"
+        },
+        {
+            year: "2024-2026",
+            school: "Central University of Himachal Pradesh",
+            degree: "MCA",
+            university: "Central University of Himachal Pradesh (CUHP)",
+            location: "Himachal Pradesh, India"
+        }
+    ],
     projects: [
+        {
+            title: "Cortex - Document QA Web App",
+            desc: "Designed and built an end-to-end document question-answering app with a React frontend and FastAPI REST backend. Implemented modular Python ingestion for PDF, TXT, and MD files, embedding generation, FAISS retrieval, third-party LLM integration, structured response parsing, and Dockerized deployment with configurable runtime parameters.",
+            tags: ["PYTHON", "FASTAPI", "REACT", "FAISS"],
+            image: "/images/codify.png",
+            link: "#"
+        },
+        {
+            title: "Search Ranking Platform",
+            desc: "Built a full-stack API service and dashboard that ranks results from 20+ engineered text features, improving relevance by 30%+ over baseline. Added rate limiting, API-key authentication, fallback logic, real-time scoring controls, reproducible XGBoost model export/import, and API latency and throughput benchmarks.",
+            tags: ["PYTHON", "FASTAPI", "REACT", "XGBOOST"],
+            image: "/images/acs.png",
+            link: "#"
+        },
+        {
+            title: "Agniveer - Detection & Reasoning Platform",
+            desc: "Built a full-stack detection and reasoning platform with model inference and image tensor preprocessing behind a testable FastAPI layer. Integrated geolocation, weather, and responder REST APIs into a structured Python request pipeline with reusable prompt templates and a React monitoring dashboard.",
+            tags: ["PYTHON", "FASTAPI", "REACT", "REST APIs"],
+            image: "/images/eval.jpg",
+            link: "#"
+        },
         {
             title: "CERES",
             desc: "AI-Based Smart OS Automation. Tauri-based system with an NLP-to-OS script pipeline using Whisper.",
@@ -123,7 +134,7 @@ export const portfolioData = {
         links: {
             linkedin: "https://www.linkedin.com/in/vinaykumarbharwal",
             github: "https://github.com/vinaykumarbharwal",
-            twitter: "https://x.com/vinaybharwal23",
+            twitter: "https://x.com/bharwalvinay",
             instagram: "https://www.instagram.com/vinay_bhxrwal_0001"
         }
     },

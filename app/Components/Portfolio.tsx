@@ -198,7 +198,7 @@ export default function Portfolio() {
                 </video>
                 
                 <div className="absolute top-8 left-8 z-20">
-                  <div className="text-[0.6rem] tracking-[4px] uppercase text-white/40 mb-2">Project Preview // 0{index + 1}</div>
+                  <div className="text-[0.6rem] tracking-[4px] uppercase text-white/40 mb-2">Project Preview {"//"} 0{index + 1}</div>
                   <h4 className="text-[1.5rem] md:text-[2.5rem] font-black uppercase leading-none tracking-tighter">
                     {vid.title}
                   </h4>
@@ -229,7 +229,7 @@ export default function Portfolio() {
           <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-[2rem]">
             {portfolioData.skills.map((cat) => (
               <div key={cat.id}>
-                <h3 className="text-[0.8rem] text-[#888] mb-[1rem] tracking-[1px] uppercase">{cat.id} // {cat.category}</h3>
+                <h3 className="text-[0.8rem] text-[#888] mb-[1rem] tracking-[1px] uppercase">{cat.id} {"//"} {cat.category}</h3>
                 <div className="flex flex-wrap gap-[0.5rem]">
                   {cat.items.map(skill => (
                     <span key={skill} className="font-mono text-[0.75rem] px-[0.6rem] py-[0.3rem] bg-white/5 border border-white/15 text-[#ccc] hover:bg-white hover:text-[#050505] hover:border-white transition-colors duration-200 cursor-default">
@@ -266,14 +266,17 @@ export default function Portfolio() {
         {/* Education Row */}
         <section className="mt-[4rem] mb-[2rem]">
           <div className="text-[0.7rem] uppercase text-[#888] tracking-[2px] border-b border-[#222] pb-[1rem] mb-[2rem]">Education</div>
-          <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] py-[2rem] border-b border-[#222] gap-[2rem]">
-            <div className="font-mono text-[0.8rem] text-[#888] font-bold pt-[0.3rem]">{portfolioData.education.year}</div>
-            <div>
-              <h4 className="text-[1.5rem] uppercase font-bold mb-[0.2rem]">{portfolioData.education.school}</h4>
-              <span className="block text-white/90 font-semibold">{portfolioData.education.degree}</span>
-              <p className="text-[#888] text-[0.9rem] mt-[0.5rem]">{portfolioData.education.location}</p>
+          {portfolioData.education.map((edu) => (
+            <div key={`${edu.school}-${edu.year}`} className="grid grid-cols-1 md:grid-cols-[160px_1fr] py-[2rem] border-b border-[#222] gap-[2rem]">
+              <div className="font-mono text-[0.8rem] text-[#888] font-bold pt-[0.3rem]">{edu.year}</div>
+              <div>
+                <h4 className="text-[1.5rem] uppercase font-bold mb-[0.2rem]">{edu.school}</h4>
+                <span className="block text-white/90 font-semibold">{edu.degree}</span>
+                <p className="text-[#888] text-[0.9rem] mt-[0.5rem]">{edu.university}</p>
+                <p className="text-[#888] text-[0.9rem] mt-[0.2rem]">{edu.location}</p>
+              </div>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Selected Projects */}
@@ -362,7 +365,7 @@ export default function Portfolio() {
         <footer id="contact" className="pt-[8rem] pb-[3rem] border-t border-[#222] mt-[6rem]">
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-[4rem] mb-[5rem] items-end">
             <div>
-              <h2 className="text-[clamp(3rem,7vw,6rem)] font-black uppercase leading-[0.9] tracking-[-2px] mb-[1.5rem]">LET'S BUILD<br/>THE FUTURE.</h2>
+              <h2 className="text-[clamp(3rem,7vw,6rem)] font-black uppercase leading-[0.9] tracking-[-2px] mb-[1.5rem]">LET&apos;S BUILD<br/>THE FUTURE.</h2>
               <p className="text-[#888] text-[1rem] max-w-[400px] leading-[1.6]">Open for internships, freelance projects, and collaborations.</p>
             </div>
             <div className="flex flex-col items-start pb-[10px]">
