@@ -43,27 +43,7 @@ export const portfolioData = {
         }
     ],
     projects: [
-        {
-            title: "Cortex - Document QA Web App",
-            desc: "Designed and built an end-to-end document question-answering app with a React frontend and FastAPI REST backend. Implemented modular Python ingestion for PDF, TXT, and MD files, embedding generation, FAISS retrieval, third-party LLM integration, structured response parsing, and Dockerized deployment with configurable runtime parameters.",
-            tags: ["PYTHON", "FASTAPI", "REACT", "FAISS"],
-            image: "/images/codify.png",
-            link: "#"
-        },
-        {
-            title: "Search Ranking Platform",
-            desc: "Built a full-stack API service and dashboard that ranks results from 20+ engineered text features, improving relevance by 30%+ over baseline. Added rate limiting, API-key authentication, fallback logic, real-time scoring controls, reproducible XGBoost model export/import, and API latency and throughput benchmarks.",
-            tags: ["PYTHON", "FASTAPI", "REACT", "XGBOOST"],
-            image: "/images/acs.png",
-            link: "#"
-        },
-        {
-            title: "Agniveer - Detection & Reasoning Platform",
-            desc: "Built a full-stack detection and reasoning platform with model inference and image tensor preprocessing behind a testable FastAPI layer. Integrated geolocation, weather, and responder REST APIs into a structured Python request pipeline with reusable prompt templates and a React monitoring dashboard.",
-            tags: ["PYTHON", "FASTAPI", "REACT", "REST APIs"],
-            image: "/images/eval.jpg",
-            link: "#"
-        },
+
         {
             title: "CERES",
             desc: "AI-Based Smart OS Automation. Tauri-based system with an NLP-to-OS script pipeline using Whisper.",
