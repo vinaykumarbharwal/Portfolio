@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import * as THREE from 'three';
 import { portfolioData } from './data';
 
@@ -172,57 +171,6 @@ export default function Portfolio() {
             </p>
           </div>
         </header>
-
-       {/* --- Full-Width Video Showcase --- */}
-      <section id="videos" className="mt-[6rem] mb-[2rem] w-full">
-        <div className="text-[0.7rem] uppercase text-[#888] tracking-[2px] border-b border-[#222] pb-[1rem] mb-[3rem]">
-          Featured Demonstrations
-        </div>
-        
-        <div className="flex flex-col gap-12">
-          {portfolioData.videos.map((vid, index) => (
-            <div 
-              key={index} 
-              className="group relative w-full border border-[#222] bg-[#050505] overflow-hidden"
-            >
-              <div className="relative w-full h-[50vh] md:h-[70vh]">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity duration-700"
-                  poster={vid.thumbnail}
-                >
-                  <source src={vid.videoSrc} type="video/mp4" />
-                </video>
-                
-                <div className="absolute top-8 left-8 z-20">
-                  <div className="text-[0.6rem] tracking-[4px] uppercase text-white/40 mb-2">Project Preview {"//"} 0{index + 1}</div>
-                  <h4 className="text-[1.5rem] md:text-[2.5rem] font-black uppercase leading-none tracking-tighter">
-                    {vid.title}
-                  </h4>
-                </div>
-
-                <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end z-20">
-                  <div className="max-w-[450px] hidden md:block">
-                    <p className="text-[#888] text-[0.9rem] md:text-[1.1rem] leading-relaxed">
-                      {vid.desc}
-                    </p>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center backdrop-blur-sm">
-                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
         {/* Technical Arsenal */}
         <section id="arsenal" className="mt-[4rem] mb-[2rem]">
           <div className="text-[0.7rem] uppercase text-[#888] tracking-[2px] border-b border-[#222] pb-[1rem] mb-[2rem]">Technical Arsenal</div>
@@ -285,14 +233,21 @@ export default function Portfolio() {
           <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[1.5rem]">
             {portfolioData.projects.map((proj) => (
               <a href={proj.link} target="_blank" key={proj.title} className="group border border-[#222] bg-white/[0.02] hover:bg-white/[0.04] hover:border-[#555] hover:-translate-y-[5px] transition-all duration-400 flex flex-col">
-                <div className="relative h-[200px] w-full bg-[#111] overflow-hidden border-b border-[#222]">
-                  <Image 
-                    src={proj.image} 
-                    alt={proj.title} 
-                    fill 
-                    className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                <div className="relative h-[180px] w-full bg-[#0b0b0b] overflow-hidden border-b border-[#222]">
+                  <div className="absolute inset-0 opacity-30 bg-[linear-gradient(135deg,rgba(255,255,255,0.16)_0,transparent_28%),linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:100%_100%,24px_24px,24px_24px]"></div>
+                  <div className="relative z-10 h-full p-6 flex flex-col justify-between">
+                    <span className="font-mono text-[0.65rem] uppercase tracking-[3px] text-white/45">Featured Build</span>
+                    <div>
+                      <h4 className="text-[1.35rem] font-black uppercase leading-none tracking-[0.5px] text-white/90">{proj.title}</h4>
+                      <div className="mt-4 flex gap-2 flex-wrap">
+                        {proj.tags.slice(0, 3).map(tag => (
+                          <span key={tag} className="font-mono text-[0.6rem] px-2 py-1 border border-white/15 bg-white/5 text-white/70">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-[1.5rem] flex-grow">
                   <h4 className="uppercase text-[1.1rem] mb-[0.5rem] tracking-[0.5px] font-bold">{proj.title}</h4>
@@ -342,25 +297,6 @@ export default function Portfolio() {
             ))}
           </div>
         </div>
-
-        {/* Distinctions */}
-        <section className="mt-[4rem] mb-[2rem]">
-          <div className="text-[0.7rem] uppercase text-[#888] tracking-[2px] border-b border-[#222] pb-[1rem] mb-[2rem]">Distinctions</div>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-[2.5rem] border border-[#222] p-[3rem]">
-            {portfolioData.distinctions.map((dist) => (
-              <div key={dist.title} className="flex gap-[1.5rem] items-start pb-[1.5rem] border-b border-white/5 last:border-0">
-                <div className="relative w-[80px] h-[80px] flex-shrink-0 border border-[#222] bg-[#222] overflow-hidden">
-                  <Image src={dist.image} alt="Award" fill className="object-cover opacity-80" />
-                </div>
-                <div>
-                  <h5 className="font-bold text-[1rem] mb-[0.3rem] text-white">{dist.title}</h5>
-                  <p className="text-[0.85rem] text-[#888]">{dist.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Footer */}
         <footer id="contact" className="pt-[8rem] pb-[3rem] border-t border-[#222] mt-[6rem]">
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-[4rem] mb-[5rem] items-end">

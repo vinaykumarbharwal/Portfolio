@@ -43,69 +43,41 @@ export const portfolioData = {
         }
     ],
     projects: [
-
         {
-            title: "CERES",
-            desc: "AI-Based Smart OS Automation. Tauri-based system with an NLP-to-OS script pipeline using Whisper.",
-            tags: ["TAURI", "PYTHON", "WHISPER"],
-            image: "/images/ceres.png",
-            link: "https://github.com/vinaykumarbharwal/ceres"
+            title: "Omni Venture Studio",
+            desc: "Decoupled multi-tenant B2B market intelligence platform for VC workflows, combining a Next.js public site, React premium dashboard, Angular compliance portal, WebSocket feeds, and AI pitch-deck chat.",
+            tags: ["NEXT.JS", "DJANGO", "FASTAPI", "LANGCHAIN", "PGVECTOR"],
+            link: "https://github.com/vinaykumarbharwal/omni-venture-studio"
         },
         {
-            title: "ACS Sentinel - Autonomous Cloud Reliability Agent",
-            desc : "Engineered a self-healing Kubernetes agent using LangGraph and Python, automating failure remediation for 3 critical scenarios (DB crash, zombie tasks, security)",
-            tags: ["LANGGRAPH", "KUBERNETES", "PYTHON"],
-            image: "/images/acs.png",
-            link: "https://github.com/vinaykumarbharwal/acs"
+            title: "ScrapeForge",
+            desc: "Full-stack SaaS web scraping platform for visually creating, scheduling, monitoring, and exporting structured scrapers without writing code.",
+            tags: ["TYPESCRIPT", "SAAS", "AUTOMATION", "SCHEDULING"],
+            link: "https://github.com/vinaykumarbharwal/ScrapeForge"
         },
         {
-            title: "Codify",
-            desc: "Remote Code Execution System. Cloud-based real-time executor with Next.js 14, Tailwind, TS, and MongoDB.",
-            tags: ["NEXT.JS", "DOCKER", "CI/CD"],
-            image: "/images/codify.png",
-            link: "https://github.com/vinaykumarbharwal/codify-server"
+            title: "Titan Supply Agent",
+            desc: "Autonomous supply-chain digital twin with LangGraph agents for scouting risks, analyzing SKU margins, drafting supplier negotiations, and enforcing human approval gates.",
+            tags: ["PYTHON", "LANGGRAPH", "LITELLM", "CHAINLIT"],
+            link: "https://github.com/vinaykumarbharwal/titan-supply-agent"
         },
         {
-            title: "Smart Grading System",
-            desc: "Subjective Answer Evaluation System. Leverages BERT for semantic analysis and Gemini OCR.",
-            tags: ["NLP", "FASTAPI", "BERT"],
-            image: "/images/eval.jpg",
-            link: "https://github.com/vinaykumarbharwal/CT-6-final-year-project"
+            title: "Wildfire Detection",
+            desc: "Mission-focused wildfire detection platform using Edge AI, YOLO-to-ONNX deployment, and mobile endpoints for low-latency fire spotting in remote areas.",
+            tags: ["PYTHON", "YOLO", "ONNX", "EDGE AI"],
+            link: "https://github.com/vinaykumarbharwal/Wildfire_Detection"
         },
         {
-            title: "Transformer Translator",
-            desc: "English-to-German translator using PyTorch & 'Attention Is All You Need' architecture. Trained on 25k+ sentence pairs.",
-            tags: ["PYTORCH", "NLP", "TRANSFORMER"],
-            image: "/images/transformer.png",
-            link: "https://github.com/vinaykumarbharwal/Transformer"
-        }
-
-    ],
-    distinctions: [
-        { 
-            title: "Smart India Hackathon Finalist", 
-            desc: "Selected for the grand finale of the world's biggest open innovation model.",
-            image: "/images/sih.jpeg"
+            title: "GitNiche",
+            desc: "AI-powered GitHub discovery platform that helps developers find active, beginner-friendly open-source issues based on stack, level, and goals.",
+            tags: ["TYPESCRIPT", "AI", "GITHUB API", "OPEN SOURCE"],
+            link: "https://github.com/vinaykumarbharwal/GitNiche"
         },
-        { 
-            title: "Winner - Web Reshape Hackathon", 
-            desc: "VNIT Nagpur (Axis'25). Ranked 1st of 100+ teams.",
-            image: "/images/vnit.jpeg"
-        },
-        { 
-            title: "Winner - Hackathon (Sipna)", 
-            desc: "Secured 1st Runner Up among 250+ participants.",
-            image: "/images/sipna.jpeg"
-        },
-        { 
-            title: "Winner - St. Vincent Palloti", 
-            desc: "Secured 1st Position by building 'Sarti' Mutual Fund Manager.",
-            image: "/images/palloti.jpg"
-        },
-        { 
-            title: "3-Star Coder", 
-            desc: "CodeChef (Max Rating: 1600). Solved 300+ competitive problems.",
-            image: "/images/cc.png"
+        {
+            title: "CUHP CTF Platform",
+            desc: "Full-stack Capture The Flag platform with team gameplay, real-time leaderboard tie-breaking, score progression charts, and categorized cybersecurity challenges.",
+            tags: ["JAVASCRIPT", "CTF", "REAL-TIME", "LEADERBOARD"],
+            link: "https://github.com/vinaykumarbharwal/CUHP-CTF-Platform"
         }
     ],
     contact: {
@@ -131,13 +103,5 @@ export const portfolioData = {
     { title: "Developing Apps with Git & GitHub", issuer: "IBM", link: "https://coursera.org/verify/K5RMF093788U" },
     { title: "HTML, CSS, & JavaScript Intro", issuer: "IBM", link: "https://coursera.org/verify/HPSV1GKMH8NQ" },
     { title: "Software Developer Career Guide and Interview Preparation", issuer: "IBM", link: "https://coursera.org/verify/8CW9NKZSGPEK" },
-    ],
-    videos: [
-    {
-        title: "AI OS Automation Demo",
-        desc: "Ceres agent performing system tasks via voice commands.",
-        videoSrc: "/videos/CERES-demo.mp4", 
-        thumbnail: "/images/ceres.jpg"
-    },
     ],
 };
